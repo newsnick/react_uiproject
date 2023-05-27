@@ -4,43 +4,64 @@ class References extends Component {
   render() {
     const staticContent = (
       <div>
-        <h2>Title</h2>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-        <img src="image1.jpg" alt="Image 1" />
+        <h2>References</h2>
+        <p>
+          Here are some references that have been influential in my journey:
+        </p>
+        <img src="book.jpg" alt="Book" />
         <ul>
-          <li>Item 1</li>
-          <li>Item 2</li>
-          <li>Item 3</li>
+          <li>The Lean Startup by Eric Ries</li>
+          <li>Thinking, Fast and Slow by Daniel Kahneman</li>
+          <li>Influence: The Psychology of Persuasion by Robert Cialdini</li>
         </ul>
-        <blockquote>
-          <p>"Quote"</p>
-          <cite>Author</cite>
-        </blockquote>
-        <p>This is another paragraph.</p>
+
+        <p>
+          I have found these books to be invaluable resources that have shaped
+          my thinking and approach to my work.
+        </p>
         <div>
-          <h3>Subheading</h3>
-          <p>This is a subheading content.</p>
+          <h3>Podcasts</h3>
+          <p>I also highly recommend the following podcasts:</p>
+          <ul>
+            <li>The Tim Ferriss Show</li>
+            <li>The School of Greatness with Lewis Howes</li>
+            <li>The Tony Robbins Podcast</li>
+          </ul>
         </div>
-        <img src="image2.jpg" alt="Image 2" />
-        <p>One more paragraph here.</p>
+        <img src="podcast.jpg" alt="Podcast" />
+        <p>
+          These podcasts feature inspiring interviews with successful
+          individuals from various fields, offering valuable insights and
+          practical advice.
+        </p>
         <a
           href="https://example1.com"
           target="_blank"
           rel="noopener noreferrer"
         >
-          Visit Example 1
+          Explore Book Recommendations
         </a>
-        <p>Final content element.</p>
-        <img src="image3.jpg" alt="Image 3" />
-        <p>Another paragraph.</p>
+        <p>
+          If you're interested in expanding your reading list, check out my
+          curated book recommendations on various topics.
+        </p>
+        <img src="article.jpg" alt="Article" />
+        <p>
+          Stay updated with the latest industry trends and insights by reading
+          articles from reputable sources and industry experts.
+        </p>
         <a
           href="https://example2.com"
           target="_blank"
           rel="noopener noreferrer"
         >
-          Visit Example 2
+          Discover Thought-Provoking Articles
         </a>
-        <p>Last content element.</p>
+        <p>
+          Explore a collection of thought-provoking articles that cover a wide
+          range of topics, from business and technology to personal development
+          and beyond.
+        </p>
       </div>
     )
 

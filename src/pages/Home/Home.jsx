@@ -1,4 +1,5 @@
 /* import React, { Component } from 'react'
+import '../../styles/Home/Home.module.css'
 import SideBar from '../../components/SideBar/SideBar'
 import Welcome from '../Welcome/Welcome'
 import References from '../References/References'
@@ -36,15 +37,14 @@ export class Home extends Component {
         return null
     }
   }
+
   render() {
     return (
       <div className="row">
-        {' '}
-        <div className="col col-lg-3 m-0 mt-4">
-          {' '}
+        <div className="col col-lg-3 m-0 mt-4 sidebar-container">
           <SideBar onLinkClick={this.handleLinkClick} />
         </div>
-        <div className="col-8 mt-5"> {this.renderContent()}</div>
+        <div className="col-8 mt-5">{this.renderContent()}</div>
       </div>
     )
   }
@@ -52,7 +52,6 @@ export class Home extends Component {
 
 export default Home
  */
-
 import React, { Component } from 'react'
 import '../../styles/Home/Home.module.css'
 import SideBar from '../../components/SideBar/SideBar'
@@ -79,15 +78,15 @@ export class Home extends Component {
 
     switch (selectedContent) {
       case 'welcome':
-        return <Welcome />
+        return <Welcome website=">>WEBSITE NAME<<" city=">>CITY NAME HERE<<" />
       case 'about':
-        return <About />
+        return <About prop3="value3" prop4="value4" />
       case 'references':
-        return <References />
+        return <References prop5="value5" prop6="value6" />
       case 'analytics':
-        return <Analytics />
+        return <Analytics prop7="value7" prop8="value8" />
       case 'seo':
-        return <SEO />
+        return <SEO prop9="value9" prop10="value10" />
       default:
         return null
     }

@@ -1,0 +1,12 @@
+#sidebarMenu {
+  background: blue;
+}
+
+.list-group-item {
+  background-color: aliceblue;
+}
+
+span {
+  background: none;
+  color: darkslategrey;
+}
