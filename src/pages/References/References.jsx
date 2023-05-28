@@ -1,14 +1,39 @@
 import React, { Component } from 'react'
+import Welcome from '../Welcome/Welcome'
 
 class References extends Component {
+  constructor(props) {
+    super(props)
+    this.state = {
+      showWelcome: false,
+    }
+  }
+
+  handleWelcomeClick = () => {
+    this.setState({ showWelcome: true })
+  }
   render() {
+    if (this.state.showWelcome) {
+      return <Welcome />
+    }
     const staticContent = (
       <div>
+        <h3 className="link" onClick={this.handleWelcomeClick}>
+          back to home
+        </h3>
         <h2>References</h2>
         <p>
           Here are some references that have been influential in my journey:
         </p>
-        <img src="book.jpg" alt="Book" />
+        <img
+          src="https://pilbox.themuse.com/image.jpg?filter=antialias&h=343&opt=1&pos=top-left&prog=1&q=keep&url=https%3A%2F%2Fcms-assets.themuse.com%2Fmedia%2Flead%2Ffe5811e6-65d1-4a9e-a521-05fa81f944dd.jpg&w=700"
+          alt="Book"
+          style={{
+            margin: '20px 20px 20px 0',
+            boxShadow: '0px 0px 10px rgba(0, 0, 0, 0.3)',
+            borderRadius: '10px',
+          }}
+        />
         <ul>
           <li>The Lean Startup by Eric Ries</li>
           <li>Thinking, Fast and Slow by Daniel Kahneman</li>
@@ -28,7 +53,15 @@ class References extends Component {
             <li>The Tony Robbins Podcast</li>
           </ul>
         </div>
-        <img src="podcast.jpg" alt="Podcast" />
+        <img
+          src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQMVySsLoTO4wUpSTzbcUmsqsi-UeAy0-CwxA&usqp=CAU"
+          alt="Podcast"
+          style={{
+            margin: '20px 20px 20px 0',
+            boxShadow: '0px 0px 10px rgba(0, 0, 0, 0.3)',
+            borderRadius: '10px',
+          }}
+        />
         <p>
           These podcasts feature inspiring interviews with successful
           individuals from various fields, offering valuable insights and

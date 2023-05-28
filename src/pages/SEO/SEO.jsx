@@ -1,15 +1,40 @@
 import React, { Component } from 'react'
+import Welcome from '../Welcome/Welcome'
 
 class SEO extends Component {
+  constructor(props) {
+    super(props)
+    this.state = {
+      showWelcome: false,
+    }
+  }
+
+  handleWelcomeClick = () => {
+    this.setState({ showWelcome: true })
+  }
   render() {
+    if (this.state.showWelcome) {
+      return <Welcome />
+    }
     const staticContent = (
       <div>
+        <h3 className="link" onClick={this.handleWelcomeClick}>
+          back to home
+        </h3>
         <h2>Search Engine Optimization (SEO)</h2>
         <p>
           Boost your online visibility and drive organic traffic to your website
           with our expert SEO services.
         </p>
-        <img src="seo-image.jpg" alt="SEO" />
+        <img
+          src="https://www.searchenginejournal.com/wp-content/uploads/2017/12/B5441374-E3D9-4644-9FD1-21566E6EF40F.jpeg"
+          alt="SEO"
+          height={250}
+          width={400}
+          style={{
+            margin: '20px 20px 20px 0',
+          }}
+        />
         <h3>What is SEO?</h3>
         <p>
           SEO stands for Search Engine Optimization. It is the process of

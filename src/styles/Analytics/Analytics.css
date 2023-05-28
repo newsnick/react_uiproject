@@ -1,4 +1,5 @@
-.links {
+.link {
   cursor: pointer;
   color: gold;
+  text-align: right;
 }

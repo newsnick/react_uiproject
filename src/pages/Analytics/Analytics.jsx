@@ -1,16 +1,42 @@
 import React, { Component } from 'react'
+import Welcome from '../Welcome/Welcome'
 
 class Analytics extends Component {
+  constructor(props) {
+    super(props)
+    this.state = {
+      showWelcome: false,
+    }
+  }
+
+  handleWelcomeClick = () => {
+    this.setState({ showWelcome: true })
+  }
+
   render() {
+    if (this.state.showWelcome) {
+      return <Welcome />
+    }
     const staticContent = (
       <div>
+        <h3 className="link" onClick={this.handleWelcomeClick}>
+          back to home
+        </h3>
         <h2>Data Analytics</h2>
         <p>
           Welcome to the fascinating world of data analytics! Here, we uncover
           valuable insights and make informed decisions based on data-driven
           analysis.
         </p>
-        <img src="analytics.jpg" alt="Analytics" />
+        <img
+          src="https://res.cloudinary.com/hevo/image/upload/f_auto,q_auto/v1625807325/hevo-learn/1_J_EXEmUkOcg-rgzJudUhZQ.png?_i=AA"
+          alt="Analytics"
+          style={{
+            margin: '20px 20px 20px 0',
+            boxShadow: '0px 0px 10px rgba(0, 0, 0, 0.3)',
+            borderRadius: '10px',
+          }}
+        />
         <ul>
           <li>Data Visualization</li>
           <li>Predictive Modeling</li>
@@ -33,7 +59,17 @@ class Analytics extends Component {
             transform raw data into actionable visual representations.
           </p>
         </div>
-        <img src="visualization.jpg" alt="Data Visualization" />
+        <img
+          src="https://assets-global.website-files.com/59e16042ec229e00016d3a66/613157f891f7741dd99a68b2_data%20visualization%20tips_blog%20listing.jpg"
+          alt="Data Visualization"
+          height={650}
+          width={1000}
+          style={{
+            margin: '20px 20px 20px 0',
+            boxShadow: '0px 0px 10px rgba(0, 0, 0, 0.3)',
+            borderRadius: '10px',
+          }}
+        />
         <p>
           With the help of advanced analytics techniques, we uncover hidden
           patterns and relationships within large datasets. Our goal is to
@@ -51,7 +87,17 @@ class Analytics extends Component {
           These interactive visualizations showcase various techniques and
           concepts in the field of data analytics.
         </p>
-        <img src="predictive-modeling.jpg" alt="Predictive Modeling" />
+        <img
+          src="https://www.columnfivemedia.com/wp-content/uploads/2021/03/Data-visualization-design-1.png"
+          alt="Predictive Modeling"
+          height={650}
+          width={1000}
+          style={{
+            margin: '20px 20px 20px 0',
+            boxShadow: '0px 0px 10px rgba(0, 0, 0, 0.3)',
+            borderRadius: '10px',
+          }}
+        />
         <p>
           Predictive modeling is another powerful tool in data analytics. By
           analyzing historical data, we can develop models that predict future
